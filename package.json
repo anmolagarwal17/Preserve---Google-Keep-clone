@@ -1,0 +1,24 @@
+{
+  "name": "preserve---google-keep-clone",
+  "version": "1.0.0",
+  "description": "this is a basic google keep clone application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anmolagarwal17/Preserve---Google-Keep-clone.git"
+  },
+  "author": "Anmol Agarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anmolagarwal17/Preserve---Google-Keep-clone/issues"
+  },
+  "homepage": "https://github.com/anmolagarwal17/Preserve---Google-Keep-clone#readme",
+  "devDependencies": {
+    "webpack": "^5.3.1",
+    "webpack-cli": "^4.1.0"
+  }
+}
