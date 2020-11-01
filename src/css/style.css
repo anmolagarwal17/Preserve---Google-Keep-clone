@@ -6,6 +6,9 @@
 
 
 /* to change theme colors */
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 .prim-bg {
     background: #fff !important;
 }
