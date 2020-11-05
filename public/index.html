@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- fontawesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /> -->
     <!-- bundle JS -->
-    <script src="../dist/main.bundle.js"></script>
+    <script src="../dist/main.bundle.js" defer></script>
+    <!-- <script src="../src/js/index.js" defer></script> -->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <!-- custom CSS -->
-    <!-- <link rel="stylesheet" href="../src/css/style.css"> -->
-    
+    <link rel="stylesheet" href="../src/css/style.css">
+
     <!-- <link href="../node_modules/material-design-icons/iconfont/material-icons.css" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
@@ -25,11 +27,15 @@
 <body>
 
     <!-- the top nav-bar -->
-    <nav class="navbar navbar-expand-md border-bottom prim-bg prim-text sticky-top">
-        <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
-        <a class="navbar-brand prim-text" href="#">Expand at md</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-            aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-sm border-bottom prim-bg prim-text sticky-top">
+        <button class="btn px-2 mr-2" id="sidebar-toggle">
+            <span class="material-icons-new round-menu mx-auto d-block"></span></button>
+        <a class="navbar-brand prim-text" href="#">
+            <img src="./img/logo.png" width="30" height="30" class="d-inline-block align-top img-thumbnail" alt=""
+                loading="lazy">
+            Preserve
+        </a>
+        <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -38,72 +44,24 @@
                 <input class="form-control w-100" type="text" placeholder="Search">
             </form>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item" id="theme-btn">
+                    <span class="material-icons material-icons-new round-wb_sunny"></span>
+                    <span class="material-icons d-none">nights_stay</span>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <span class="material-icons">
-        3d_rotation
-    </span>
+    <div class="container-fluid">
 
-    <span class="material-icons">
-        list
-    </span>
-
-    <span class="material-icons">
-        alarm
-    </span>
-
-
-    <!-- Sidebar -->
-    <!-- <div class="d-flex" id="wrapper">
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Shortcuts</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Overview</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Events</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Status</a>
-            </div>
-        </div>
     </div>
-    <div class="d-flex toggled" id="wrapper1">
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Shortcuts</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Overview</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Events</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action bg-danger sidenav-item">Status</a>
-            </div>
-        </div>
-    </div> -->
-    <!-- Sidebar END -->
+
+    <!-- <span class="material-icons-new round-account_balance"></span> -->
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -117,3 +75,9 @@
 </body>
 
 </html>
+
+<!-- <i class="material-icons">donut_small</i>
+<i class="material-icons-outlined">donut_small</i>
+<i class="material-icons-two-tone">donut_small</i>
+<i class="material-icons-round">donut_small</i>
+<i class="material-icons-sharp">donut_small</i> -->
