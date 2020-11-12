@@ -12,10 +12,57 @@
     background: #fff !important;
 }
 
-.prim-text,
-.prim-icon {
+.dark .prim-bg {
+    background: #202124 !important;
+}
+
+.prim-text {
     color: #202124 !important;
-    fill: #202124 !important;
+}
+
+.dark .prim-text {
+    color: #e8eaed !important;
+}
+
+.prime-bg.active,
+.dark .prime-bg.active {
+    background: #007bff !important;
+}
+
+.prim-text.active,
+.dark .prim-text.active {
+    color: #fff !important;
+}
+
+.prim-icon,
+.sec-icon {
+    color: black;
+    font-size: 40px;
+    width: 1em !important;
+    height: 1em !important;
+    padding: 10px;
+    cursor: pointer;
+}
+
+svg.sec-icon-sm,
+.sec-icon-sm svg {
+    opacity: 0.7;
+    color: black;
+}
+
+.dark svg.sec-icon-sm,
+.dark .sec-icon-sm svg {
+
+    color: white;
+}
+
+.dark .prim-icon,
+.dark .sec-icon {
+    color: white;
+}
+
+.prim-icon {
+    opacity: 0.9;
 }
 
 .sec-text {
@@ -23,10 +70,56 @@
 }
 
 .sec-icon {
-    color: #5f6368 !important;
-    fill: #5f6368 !important;
+    opacity: 0.7;
+}
+
+.sec-icon:hover {
+    background: #5f636828;
+    opacity: 0.9;
+    border-radius: 50%;
 }
 
 .navbar-toggler:focus {
     outline: none;
+}
+
+/* fontawesome */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+}
+
+/* application layout CSS */
+
+main {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: min(20%, 270px) 1fr;
+}
+
+.sidebar {
+    top: 71.6px;
+    position: sticky;
+    height: calc(100vh - 71.6px);
+    /* background: #000; */
+    /* color: wheat; */
+}
+
+main.collapsed {
+    grid-template-columns: min(7%, 100px) 1fr;
+}
+
+main.collapsed .w-25 {
+    width: 100% !important;
+}
+
+/* todo hide sidebar on smaller screens when collapsed */
+
+/* application layout CSS end */
+
+.toast {
+    position: absolute !important;
+    top: 0;
 }

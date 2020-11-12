@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- fontawesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /> -->
     <!-- bundle JS -->
@@ -28,8 +27,9 @@
 
     <!-- the top nav-bar -->
     <nav class="navbar navbar-expand-sm border-bottom prim-bg prim-text sticky-top">
-        <button class="btn px-2 mr-2" id="sidebar-toggle">
-            <span class="material-icons-new round-menu mx-auto d-block"></span></button>
+        <span class="btn" id="sidebar-toggle">
+            <i class="fas fa-bars sec-icon"></i>
+        </span>
         <a class="navbar-brand prim-text" href="#">
             <img src="./img/logo.png" width="30" height="30" class="d-inline-block align-top img-thumbnail" alt=""
                 loading="lazy">
@@ -41,21 +41,82 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <form class="form-inline w-50 mx-auto my-md-0">
-                <input class="form-control w-100" type="text" placeholder="Search">
+                <input class="form-control w-100 prim-bg prim-text" type="text" placeholder="Search">
             </form>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="theme-btn">
-                    <span class="material-icons material-icons-new round-wb_sunny"></span>
-                    <span class="material-icons d-none">nights_stay</span>
+                    <i class="fas fa-sun sec-icon"></i>
+                    <i class="fas fa-moon sec-icon d-none"></i>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <main>
+        <section class="sidebar border-right prim-bg">
+            <div class="list-group list-group-flush">
+                <button
+                    class="list-group-item list-group-item-action d-flex align-items-center prim-text prime-bg active"
+                    id="notesBtn">
+                    <i class="fas fa-lightbulb w-25"></i>
+                    <span>Notes</span>
+                    <span class="badge badge-info badge-pill ml-auto">14</span></button>
+                </button>
+                <button
+                    class="list-group-item list-group-item-action d-flex align-items-center border-bottom border-secondary prim-text prim-bg"
+                    id="reminderBtn">
+                    <i class="fas fa-bell w-25 sec-icon-sm"></i>
+                    <span>Reminders</span>
+                    <span class="badge badge-info badge-pill ml-auto">14</span></button>
+            </div>
+            <div class="list-group list-group-flush">
+                <button class="list-group-item list-group-item-action d-flex align-items-center prim-text prim-bg"
+                    id="labelsBtn">
+                    <i class="fas fa-tag w-25 sec-icon-sm"></i>
+                    <span>Sample label</span>
+                </button>
+                <button
+                    class="list-group-item list-group-item-action d-flex align-items-center border-bottom border-secondary prim-text prim-bg"
+                    id="labelsBtn">
+                    <i class="fas fa-pencil-alt w-25 sec-icon-sm"></i>
+                    <span>Edit labels</span>
+                </button>
+            </div>
+            <div class="list-group list-group-flush border-bottom">
+                <button class="list-group-item list-group-item-action d-flex align-items-center prim-text prim-bg"
+                    id="archiveBtn">
+                    <i class="fas fa-box-open w-25 sec-icon-sm"></i>
+                    <span>Archive</span>
+                </button>
+                <button class="list-group-item list-group-item-action d-flex align-items-center prim-text prim-bg"
+                    id="trashBtn">
+                    <i class="fas fa-trash-alt w-25 sec-icon-sm"></i>
+                    <span>Trash</span>
+                </button>
+            </div>
+        </section>
+        <section class="content prim-bg">
+            <div class="create-new-head">
+                <form class="w-50 my-3 mx-auto">
+                    <div class="form-group position-relative my-0">
+                        <span class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center">
+                            <i class="fas fa-pencil-alt ml-auto mx-3 sec-icon-sm"></i>
+                            <i class="fas fa-bell mx-3 sec-icon-sm"></i>
+                            <i class="fas fa-photo-video mx-3 sec-icon-sm"></i>
+                            <i class="fas fa-list mx-3 sec-icon-sm"></i>
+                        </span>
+                        <input type="text" class="form-control prim-text prim-bg" id="exampleInputEmail1"
+                            placeholder="Take a note..." aria-describedby="Take a note">
+                    </div>
+                </form>
 
-    </div>
+            </div>
+            <div>
 
+
+            </div>
+        </section>
+    </main>
     <!-- <span class="material-icons-new round-account_balance"></span> -->
 
 
